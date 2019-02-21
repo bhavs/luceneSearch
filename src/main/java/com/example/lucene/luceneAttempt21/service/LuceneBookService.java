@@ -43,7 +43,7 @@ public class LuceneBookService {
             e.printStackTrace();
         }
         for (Books booktemp : returnValue){
-            booktemp.toString();
+           System.out.println(booktemp.toString());
         }
 
     }

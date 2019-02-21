@@ -28,7 +28,7 @@ public class BookService {
         List<Books> books= bookRepository.findByAuthorName(name);
         System.out.println("Printing values from the db query");
         for(Books book: books){
-            book.toString();
+            System.out.println(book.toString());
             luceneBookService.displayAuthorSearchResults(book);
         }
 
@@ -38,7 +38,7 @@ public class BookService {
         Iterable<Books> books= bookRepository.findAll();
         System.out.println("Printing values from the db query");
         for(Books book: books){
-            book.toString();
+            System.out.println(book.toString());
         }
     }
 

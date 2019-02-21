@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -46,7 +47,7 @@ public class BookSearcher {
 
     public List<Books> searchByAuthorName(Long bookID, String authorName)
             throws Exception {
-         List<Books> searchResults=null;
+         List<Books> searchResults=new ArrayList<Books>();
         IndexSearcher searcher = createSearcher(bookID);
         QueryParser qp = new QueryParser("authorName", new StandardAnalyzer());
         Query authorNameQuery = qp.parse(authorName);
